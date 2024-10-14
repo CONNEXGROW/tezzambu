@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tezz Ambulance Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-    * {
+    <style>/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,14 +23,44 @@ body {
     margin: 0 auto;
 }
 
-.top-header, .main-header {
+/* Top header */
+.top-header {
+    background-color: #f8f9fa;
     padding: 10px 0;
 }
 
-.social-icons a, .auth-links a, .contact-info div {
-    font-size: 14px;
+.top-header .social-icons a {
+    color: #333;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
+.top-header .auth-links a {
+    color: #333;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Main header */
+.main-header {
+    background-color: #fc0303;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-header .contact-info div {
+    font-size: 16px;
+}
+
+/* Hero Section */
 .hero {
     background-image: url('Armstrong_Ambulance_P17.jpg');
     background-size: cover;
@@ -40,6 +70,16 @@ body {
     align-items: center;
     position: relative;
     text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -57,6 +97,10 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2em;
 }
 
 /* Responsive Buttons */
@@ -82,10 +126,24 @@ body {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.btn:hover {
+    background-color: #c82333;
+    color: #fff;
+}
+
+/* Services Section */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-card img {
@@ -94,11 +152,41 @@ body {
     object-fit: cover;
 }
 
-/* About section adjustments */
-.about-content {
+.service-card h3 {
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+.service-card p {
+    padding: 0 20px 20px;
+    font-size: 1em;
+}
+
+/* About Section */
+.about {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    padding-left: 20px;
 }
 
 .about-image img {
@@ -107,10 +195,22 @@ body {
     border-radius: 5px;
 }
 
+/* Gallery Section */
+.gallery {
+    margin-top: 40px;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -119,6 +219,10 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+footer p {
+    font-size: 1em;
 }
 
 /* Responsive adjustments */
@@ -144,9 +248,18 @@ footer {
         font-size: 2em;
     }
 
-    .about-content {
+    .about {
         flex-direction: column;
+    }
+
+    .about-content {
+        padding-right: 0;
         text-align: center;
+    }
+
+    .about-image {
+        padding-left: 0;
+        margin-top: 20px;
     }
 
     .service-grid {
@@ -172,6 +285,7 @@ footer {
         font-size: 14px;
     }
 }
+
 
     </style>
 </head>
@@ -230,8 +344,9 @@ footer {
                                 <i class="fas fa-ambulance button-icon"></i> Emergency Booking
                             </a>
                 
+                           
                             <!-- Emergency SOS button -->
-                            <a href="#" class="btn emergency-sos-btn">
+                            <a href="tel:+919471314033" class="btn emergency-sos-btn">
                                 <i class="fas fa-siren button-icon"></i> Emergency SOS
                             </a>
                         </div>
