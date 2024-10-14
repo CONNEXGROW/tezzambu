@@ -6,282 +6,173 @@
     <title>Tezz Ambulance Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .top-header {
-            background-color: #e31010f5;
-            color: white;
-            padding: 5px 0;
-        }
-        .top-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .social-icons a {
-            color: white;
-            margin-right: 10px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .contact-info {
-            display: flex;
-            font-size: 14px;
-        }
-        .contact-info div {
-            margin-right: 20px;
-        }
-        .auth-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 10px;
-            font-size: 14px;
-        }
-        .main-header {
-            background-color: #fc0303;
-            padding: 10px 0;
-        }
-        .main-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-        .logo span {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .nav-links {
-            display: flex;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
-        .hero {
-            background-image: url('Armstrong_Ambulance_P17.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .hero h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        .hero-content {
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-header, .main-header {
+    padding: 10px 0;
+}
+
+.social-icons a, .auth-links a, .contact-info div {
+    font-size: 14px;
+}
+
+.hero {
+    background-image: url('Armstrong_Ambulance_P17.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
     position: relative;
+    text-align: center;
+}
+
+.hero-content {
     z-index: 1;
     color: white;
     padding: 0 20px;
-    text-align: center; /* Center content */
 }
 
+.hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Buttons */
 .button-container {
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 20px; /* Add spacing between buttons */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
-/* Button Container */
-.button-container {
-    display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 20px; /* Add spacing between buttons */
-    margin-top: 20px;
-}
-
-/* General Button Style */
 .btn {
     display: inline-flex;
     align-items: center;
-    background-color: #dc3545; /* Red background */
-    color: #fff; /* White text */
+    background-color: #dc3545;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
-    border: 2px solid #dc3545; /* Red border */
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Icon inside Button */
-.button-icon {
-    font-size: 24px; /* Icon size */
-    margin-right: 10px;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Specific Button Styles */
-.ambulance-btn {
-    background-color: #dc3545; /* Red background */
-    border-color: #dc3545; /* Same red border */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.emergency-booking-btn {
-    background-color: #dc3545; /* Red background */
-    border-color: #dc3545; /* Same red border */
+/* About section adjustments */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.emergency-sos-btn {
-    background-color: #dc3545; /* Red background */
-    border-color: #dc3545; /* Same red border */
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
 }
 
-/* Rotating ambulance icon for the "Emergency Booking" button */
-.emergency-booking-btn .button-icon {
-    animation: rotateIcon 2s linear infinite; /* Add a rotating effect */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Hover effect for the buttons */
-.btn:hover {
-    background-color: #fff; /* White background on hover */
-    color: #dc3545; /* Red text on hover */
-    border-color: #dc3545; /* Red border on hover */
+/* Footer */
+footer {
+    background-color: #fc0303;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Keyframe for rotating ambulance icon */
-@keyframes rotateIcon {
-    0% {
-        transform: rotate(0deg);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
     }
-    100% {
-        transform: rotate(360deg);
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        height: 200px;
+    }
 
-        
-        .services {
-            padding: 50px 0;
-            background-color: #f4f4f4;
-        }
-        .services h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .service-card {
-            background-color: white;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .service-card-content {
-            padding: 20px;
-        }
-        .service-card h3 {
-            margin-bottom: 10px;
-        }
-        .about {
-            padding: 50px 0;
-        }
-        .about h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        .about-image {
-            flex: 1;
-        }
-        .about-image img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .about-text {
-            flex: 1;
-        }
-        .gallery {
-            padding: 50px 0;
-            background-color: #f4f4f4;
-        }
-        .gallery h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #fc0303;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        
-        
+    .hero h1 {
+        font-size: 1.2em;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
