@@ -1,0 +1,68 @@
+/* Hero section styles */
+.hero {
+    background-image: url('images/ambulance-hero.jpg'); /* Update the image source */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    width: 100%; /* Ensure it takes full width of the container */
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5em;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.hero-content img {
+    max-width: 150px; /* Adjust the image size */
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%; /* Make the image circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 30px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.hero-content a:hover {
+    background-color: #c0392b;
+}
+
+.hero-content .service-btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Ensure buttons stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .hero-content a {
+        display: block;
+        margin: 10px 0;
+    }
+}

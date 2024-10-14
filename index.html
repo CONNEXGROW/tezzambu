@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tezz Ambulance Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .top-header {
+            background-color: #e31010f5;
+            color: white;
+            padding: 5px 0;
+        }
+        .top-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .contact-info {
+            display: flex;
+            font-size: 14px;
+        }
+        .contact-info div {
+            margin-right: 20px;
+        }
+        .auth-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        .main-header {
+            background-color: #fc0303;
+            padding: 10px 0;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        .hero {
+            background-image: url('Armstrong_Ambulance_P17.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 0 20px;
+    text-align: center; /* Center content */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Add spacing between buttons */
+    margin-top: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Add spacing between buttons */
+    margin-top: 20px;
+}
+
+/* General Button Style */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #dc3545; /* Red border */
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Icon inside Button */
+.button-icon {
+    font-size: 24px; /* Icon size */
+    margin-right: 10px;
+}
+
+/* Specific Button Styles */
+.ambulance-btn {
+    background-color: #dc3545; /* Red background */
+    border-color: #dc3545; /* Same red border */
+}
+
+.emergency-booking-btn {
+    background-color: #dc3545; /* Red background */
+    border-color: #dc3545; /* Same red border */
+}
+
+.emergency-sos-btn {
+    background-color: #dc3545; /* Red background */
+    border-color: #dc3545; /* Same red border */
+}
+
+/* Rotating ambulance icon for the "Emergency Booking" button */
+.emergency-booking-btn .button-icon {
+    animation: rotateIcon 2s linear infinite; /* Add a rotating effect */
+}
+
+/* Hover effect for the buttons */
+.btn:hover {
+    background-color: #fff; /* White background on hover */
+    color: #dc3545; /* Red text on hover */
+    border-color: #dc3545; /* Red border on hover */
+}
+
+/* Keyframe for rotating ambulance icon */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+        
+        .services {
+            padding: 50px 0;
+            background-color: #f4f4f4;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-card-content {
+            padding: 20px;
+        }
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+        .about {
+            padding: 50px 0;
+        }
+        .about h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .gallery {
+            padding: 50px 0;
+            background-color: #f4f4f4;
+        }
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #fc0303;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- <header class="top-header">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="YouTube">y</a>
+                <a href="#" aria-label="Pinterest">p</a>
+            </div> -->
+            <!-- <div class="contact-info">
+                <div>+91-8888888888</div>
+                <div>websupport@justdial.com</div>
+                <div>Malad West</div>
+            </div>
+            <div class="auth-links">
+                <a href="#">Log In</a> | <a href="#">Sign Up</a>
+            </div> -->
+        </div>
+    </header>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images (1).jpeg" alt="Prime Ambulance Services Logo">
+                <span>Tezz Ambulance Services</span>
+            </a>
+            <!-- <nav class="nav-links">
+                <a href="#">HOME</a>
+                <a href="#">SERVICES</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">GALLERY</a>
+                <a href="#">VIDEOS</a>
+                <a href="#">TESTIMONIALS</a>
+                <a href="#">CONTACT US</a>
+            </nav> -->
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Efficient and Immediate</h1>
+                <h2>Ambulance Services</h2>
+                
+               
+                        <div class="button-container">
+                            <!-- Book Ambulance button -->
+                            <a href="https://connexgrow.github.io/map-test/" class="btn ambulance-btn">
+                                <i class="fas fa-ambulance button-icon"></i> Book Ambulance
+                            </a>
+                
+                            <!-- Emergency Booking button -->
+                            <a href="https://connexgrow.github.io/tezz-amulance/" class="btn emergency-booking-btn">
+                                <i class="fas fa-ambulance button-icon"></i> Emergency Booking
+                            </a>
+                
+                            <!-- Emergency SOS button -->
+                            <a href="#" class="btn emergency-sos-btn">
+                                <i class="fas fa-siren button-icon"></i> Emergency SOS
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                
+                </section>
+                
+                
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="oxygen-mask-patient-treatment-ambulance-stretcher-26818272.webp" alt="Basic Life Support">
+                        <div class="service-card-content">
+                            <h3>Basic Life Support</h3>
+                            <p>For the patients who need medical transportation. It has a bed for patients, pulse monitor and oxygen device.</p>
+                            <!-- <a href="#" class="btn">Enquire Now</a> -->
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="download.jpeg" alt="Mortuary Ambulance Services">
+                        <div class="service-card-content">
+                            <h3>Mortuary Ambulance Services</h3>
+                            <p>Mortuary ambulance services are mainly used to move the dead body from one place to another.</p>
+                            <!-- <a href="#" class="btn">Enquire Now</a> -->
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="Advanced Life Support.jpg" alt="Advanced Life Support">
+                        <div class="service-card-content">
+                            <h3>Advanced Life Support</h3>
+                            <p>ALS ambulance is equipped with a ventilator, ECG monitoring device and paramedic staff.</p>
+                            <!-- <a href="#" class="btn">Enquire Now</a> -->
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="quick-e-ambulance-com-vehicle-internal-photos-parallel-view-otfktljvrsyebik6c73sn2elzlpufjppw83bob2940.jpg" alt="Patient Transport Vehicle">
+                        <div class="service-card-content">
+                            <h3>Patient Transport Vehicle</h3>
+                            <p>PTV is a non-emergency patient transport vehicle fully equipped just like a normal ambulance.</p>
+                            <!-- <a href="#" class="btn">Enquire Now</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="istockphoto-1296791789-612x612.jpg" alt="Ambulance">
+                    </div>
+                    <div class="about-text">
+                        <p> mujhe ghar jaa hai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="gallery">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://demowebsite1728911322107747422.yourownwebsite.in/images/gallery1.jpg" alt="Gallery Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://demowebsite1728911322107747422.yourownwebsite.in/images/gallery2.jpg" alt="Gallery Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://demowebsite1728911322107747422.yourownwebsite.in/images/gallery3.jpg" alt="Gallery Image 3">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <div class="container">
+            <!-- <p>&copy; 2024 Prime Ambulance Services. All rights reserved.</p> -->
+        </div>
+    </footer>
+</body>
+</html>
