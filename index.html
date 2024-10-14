@@ -7,6 +7,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>/* Global Reset */
 * {
+    /* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the top header */
+.top-header {
+    background-color: #ff0000; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space between logo and title */
+}
+
+/* Styling for the logo inside the header */
+.top-header .logo img {
+    height: 60px; /* Set logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+/* Styling for the title inside the header */
+.top-header .title {
+    font-size: 24px; /* Font size for title */
+    font-weight: bold; /* Bold font */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top-header .title {
+        font-size: 20px; /* Smaller font size on mobile */
+    }
+
+    .top-header {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+}
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
